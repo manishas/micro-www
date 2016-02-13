@@ -7,9 +7,9 @@ node_js:
 
 build:
     pre_ci: 
-      - docker build -t manishas/micro-www:$BUILD_NUMBER .
+      - docker build -t manishas/micro-www:$BRANCH.$BUILD_NUMBER .
     post_ci: 
-      - docker push manishas/micro-www:$BUILD_NUMBER
+      - docker push manishas/micro-www:$BRANCH.$BUILD_NUMBER
 
 integrations:
   hub:
